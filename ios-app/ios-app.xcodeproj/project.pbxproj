@@ -18,6 +18,8 @@
 		F91BA0BD218445080059E943 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0BC218445080059E943 /* TakePhotoViewController.swift */; };
 		F91BA0BF218447CE0059E943 /* PreviewCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0BE218447CE0059E943 /* PreviewCameraViewController.swift */; };
 		F91BA0C121844DC90059E943 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0C021844DC90059E943 /* CouponViewController.swift */; };
+		F91BA0C3218474FA0059E943 /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0C2218474FA0059E943 /* PostImageViewController.swift */; };
+		F91BA0C5218478B00059E943 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0C4218478B00059E943 /* Config.swift */; };
 		FB65A0E01802ADB771ABFCA8 /* Pods_ios_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E989651F65F186BDF310FF8 /* Pods_ios_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		F91BA0BC218445080059E943 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		F91BA0BE218447CE0059E943 /* PreviewCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCameraViewController.swift; sourceTree = "<group>"; };
 		F91BA0C021844DC90059E943 /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
+		F91BA0C2218474FA0059E943 /* PostImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
+		F91BA0C4218478B00059E943 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				F91BA0BC218445080059E943 /* TakePhotoViewController.swift */,
 				F91BA0BE218447CE0059E943 /* PreviewCameraViewController.swift */,
 				F91BA0C021844DC90059E943 /* CouponViewController.swift */,
+				F91BA0C2218474FA0059E943 /* PostImageViewController.swift */,
+				F91BA0C4218478B00059E943 /* Config.swift */,
 			);
 			path = "ios-app";
 			sourceTree = "<group>";
@@ -241,7 +247,9 @@
 				F91BA0A7218433E30059E943 /* ViewController.swift in Sources */,
 				F91BA0A5218433E30059E943 /* AppDelegate.swift in Sources */,
 				F91BA0B921843DA80059E943 /* CurrentUserViewController.swift in Sources */,
+				F91BA0C3218474FA0059E943 /* PostImageViewController.swift in Sources */,
 				F91BA0BD218445080059E943 /* TakePhotoViewController.swift in Sources */,
+				F91BA0C5218478B00059E943 /* Config.swift in Sources */,
 				F91BA0BF218447CE0059E943 /* PreviewCameraViewController.swift in Sources */,
 				F91BA0BB218440270059E943 /* Models.swift in Sources */,
 			);

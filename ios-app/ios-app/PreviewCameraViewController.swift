@@ -34,4 +34,10 @@ class PreviewCameraViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "postImage" {
+            let postVC = segue.destination as! PostImageViewController
+            postVC.image = self.image!
+        }
+    }
 }
