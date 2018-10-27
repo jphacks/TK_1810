@@ -145,8 +145,8 @@ class ShopSuggestViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func getShopsFromLocation(lat: String, lng: String) {
-        //        let url = "https://mutekikantai-backend.herokuapp.com/shops/search?lat=\(lat)&long=\(lng)"
-        let url = "https://mutekikantai-backend.herokuapp.com/shops"
+                let url = "https://mutekikantai-backend.herokuapp.com/shops/search?lat=\(lat)&long=\(lng)"
+//        let url = "https://mutekikantai-backend.herokuapp.com/shops"
         let jsonDecoder = JSONDecoder()
         
         Alamofire.request(url).validate().responseJSON { res in
