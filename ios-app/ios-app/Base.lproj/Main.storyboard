@@ -60,12 +60,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ds-oe-Z0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817" y="27"/>
+            <point key="canvasLocation" x="1343" y="27"/>
         </scene>
-        <!--View Controller-->
+        <!--Current User View Controller-->
         <scene sceneID="y1Q-ZC-5g4">
             <objects>
-                <viewController id="fEm-DL-Hst" sceneMemberID="viewController">
+                <viewController id="fEm-DL-Hst" customClass="CurrentUserViewController" customModule="ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTM-eQ-VpT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,10 +165,14 @@
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="fmb-eJ-NcY"/>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="9bi-Mh-223" id="fll-SN-mYR"/>
+                        <outlet property="tableView" destination="vN2-FZ-wx7" id="ULU-dS-Y1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vD1-re-uOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="27"/>
+            <point key="canvasLocation" x="2033" y="27"/>
         </scene>
     </scenes>
     <resources>

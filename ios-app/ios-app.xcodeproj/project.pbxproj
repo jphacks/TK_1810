@@ -13,6 +13,8 @@
 		F91BA0AC218433E50059E943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91BA0AB218433E50059E943 /* Assets.xcassets */; };
 		F91BA0AF218433E50059E943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91BA0AD218433E50059E943 /* LaunchScreen.storyboard */; };
 		F91BA0B721843AFD0059E943 /* TwitterAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0B621843AFD0059E943 /* TwitterAuthViewController.swift */; };
+		F91BA0B921843DA80059E943 /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0B821843DA80059E943 /* CurrentUserViewController.swift */; };
+		F91BA0BB218440270059E943 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0BA218440270059E943 /* Models.swift */; };
 		FB65A0E01802ADB771ABFCA8 /* Pods_ios_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E989651F65F186BDF310FF8 /* Pods_ios_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		F91BA0AE218433E50059E943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F91BA0B0218433E50059E943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F91BA0B621843AFD0059E943 /* TwitterAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthViewController.swift; sourceTree = "<group>"; };
+		F91BA0B821843DA80059E943 /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
+		F91BA0BA218440270059E943 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				F91BA0AD218433E50059E943 /* LaunchScreen.storyboard */,
 				F91BA0B0218433E50059E943 /* Info.plist */,
 				F91BA0B621843AFD0059E943 /* TwitterAuthViewController.swift */,
+				F91BA0B821843DA80059E943 /* CurrentUserViewController.swift */,
+				F91BA0BA218440270059E943 /* Models.swift */,
 			);
 			path = "ios-app";
 			sourceTree = "<group>";
@@ -224,6 +230,8 @@
 				F91BA0B721843AFD0059E943 /* TwitterAuthViewController.swift in Sources */,
 				F91BA0A7218433E30059E943 /* ViewController.swift in Sources */,
 				F91BA0A5218433E30059E943 /* AppDelegate.swift in Sources */,
+				F91BA0B921843DA80059E943 /* CurrentUserViewController.swift in Sources */,
+				F91BA0BB218440270059E943 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
