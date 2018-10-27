@@ -481,6 +481,9 @@
                                 <rect key="frame" x="23" y="26" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="camera"/>
+                                <connections>
+                                    <segue destination="VRZ-yF-gNj" kind="presentation" id="0Es-eG-dEa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新規投稿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdP-az-nGC">
                                 <rect key="frame" x="151" y="32" width="70" height="21"/>
@@ -588,7 +591,8 @@
         <image name="twitter" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="feF-wM-iFf"/>
         <segue reference="7x7-9y-QkV"/>
-        <segue reference="kO8-Jx-pxc"/>
+        <segue reference="0Es-eG-dEa"/>
     </inferredMetricsTieBreakers>
 </document>
