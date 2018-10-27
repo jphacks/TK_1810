@@ -1,0 +1,13 @@
+.python-version
+__pycache__
+data/coco
+data/mydata
+data/*.csv
+data/demo_videos
+deploy.sh
+weights/*.weights
+.ipynb_checkpoints
+result
+runs
+runs_old
+*.sh

@@ -20,12 +20,13 @@ import torch.optim as optim
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--epochs", type=int, default=30, help="number of epochs")
-parser.add_argument("--image_folder", type=str, default="data/samples", help="path to dataset")
-parser.add_argument("--batch_size", type=int, default=16, help="size of each image batch")
-parser.add_argument("--model_config_path", type=str, default="config/yolov3.cfg", help="path to model config file")
-parser.add_argument("--data_config_path", type=str, default="config/coco.data", help="path to data config file")
+parser.add_argument("--image_folder", type=str, default="data/mydata/images", help="path to dataset")
+parser.add_argument("--batch_size", type=int, default=8, help="size of each image batch")
+parser.add_argument("--base_model_config_path", type=str, default="config/yolov3.cfg", help="path to model config file")
 parser.add_argument("--weights_path", type=str, default="weights/yolov3.weights", help="path to weights file")
-parser.add_argument("--class_path", type=str, default="data/coco.names", help="path to class label file")
+parser.add_argument("--model_config_path", type=str, default="config/mymodel.cfg", help="path to model config file")
+parser.add_argument("--data_config_path", type=str, default="config/mydata.data", help="path to data config file")
+parser.add_argument("--class_path", type=str, default="data/mydata.names", help="path to class label file")
 parser.add_argument("--conf_thres", type=float, default=0.8, help="object confidence threshold")
 parser.add_argument("--nms_thres", type=float, default=0.4, help="iou thresshold for non-maximum suppression")
 parser.add_argument("--n_cpu", type=int, default=0, help="number of cpu threads to use during batch generation")
@@ -56,10 +57,22 @@ momentum = float(hyperparams["momentum"])
 decay = float(hyperparams["decay"])
 burn_in = int(hyperparams["burn_in"])
 
-# Initiate model
+# Initiate base model
+base_model = Darknet(opt.base_model_config_path)
+base_model.load_weights(opt.weights_path)
+
+# Prepare my model (dish detector)
 model = Darknet(opt.model_config_path)
-# model.load_weights(opt.weights_path)
 model.apply(weights_init_normal)
+
+# Copy params except for the last layer
+base_model_params = base_model.named_parameters()
+model_params      = dict(model.named_parameters())
+for name, param in base_model_params:
+    if name.find('conv_105') == -1:
+        model_params[name].data.copy_(param.data)
+
+del(base_model)
 
 if cuda:
     model = model.cuda()
@@ -81,7 +94,7 @@ for epoch in range(opt.epochs):
         targets = Variable(targets.type(Tensor), requires_grad=False)
 
         optimizer.zero_grad()
-
+        
         loss = model(imgs, targets)
 
         loss.backward()
