@@ -12,3 +12,9 @@ json.each do |data|
   #Shop.create!(*d, without_protection: true)
   Shop.create!(data)
 end
+
+# food category
+json = ActiveSupport::JSON.decode(File.read('db/seeds/food_category.json'))
+json.each do |data|
+  FoodCategory.create!(data)
+end
