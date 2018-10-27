@@ -1,0 +1,69 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Default (2.1.0)
+  - libwebp (0.6.1):
+    - libwebp/core (= 0.6.1)
+    - libwebp/dec (= 0.6.1)
+    - libwebp/demux (= 0.6.1)
+    - libwebp/dsp (= 0.6.1)
+    - libwebp/enc (= 0.6.1)
+    - libwebp/mux (= 0.6.1)
+    - libwebp/utils (= 0.6.1)
+    - libwebp/webp (= 0.6.1)
+  - libwebp/core (0.6.1):
+    - libwebp/webp
+  - libwebp/dec (0.6.1):
+    - libwebp/core
+  - libwebp/demux (0.6.1):
+    - libwebp/core
+  - libwebp/dsp (0.6.1):
+    - libwebp/core
+  - libwebp/enc (0.6.1):
+    - libwebp/core
+  - libwebp/mux (0.6.1):
+    - libwebp/core
+  - libwebp/utils (0.6.1):
+    - libwebp/core
+  - libwebp/webp (0.6.1)
+  - SDWebImage/Core (4.4.2)
+  - SDWebImage/WebP (4.4.2):
+    - libwebp (~> 0.5)
+    - SDWebImage/Core
+  - Swifter (2.2.2)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - Default
+  - SDWebImage/WebP
+  - Swifter (from `https://github.com/mattdonnelly/Swifter.git`)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Default
+    - libwebp
+    - SDWebImage
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Swifter:
+    :git: https://github.com/mattdonnelly/Swifter.git
+
+CHECKOUT OPTIONS:
+  Swifter:
+    :commit: 55e05621749e14c1dc7a2067b5d491756d0e01ad
+    :git: https://github.com/mattdonnelly/Swifter.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Default: 6b79a17b84763dac64c2e49ea1198c00ce8c2631
+  libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  Swifter: 13dd997d16b43a2948f77a5da8bd2b1c636ca495
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: 51248788645cb39e238c94215a2c3b98ce5b5899
+
+COCOAPODS: 1.5.3
