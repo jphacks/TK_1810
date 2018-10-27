@@ -52,7 +52,8 @@ class CouponsController < ApplicationController
       params.permit(
         :insta_score,
         :photo_url,
-        :commnet,
+        :comment,
+        :tweet_url,
         :shop_id,
         :food_category_id,
       )

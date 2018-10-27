@@ -1,1 +1,4 @@
-json.merge! shop.attributes
+json.merge! shop.attributes.except(
+  "updated_at",
+  "created_at", 
+)

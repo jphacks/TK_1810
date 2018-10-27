@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   # coupons
   get 'coupons/:id', to: 'coupons#show'
   put 'coupons', to: 'coupons#create'
+
+  # food categories
+  get 'food_categories', to: 'food_categories#index'
 end
