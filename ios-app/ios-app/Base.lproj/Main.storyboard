@@ -446,7 +446,7 @@
                                     <color key="titleColor" red="0.124973126" green="0.151200316" blue="0.13420549179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lHF-xc-Guu" kind="presentation" id="feF-wM-iFf"/>
+                                    <segue destination="lHF-xc-Guu" kind="presentation" identifier="selectShop" id="feF-wM-iFf"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="食べ物を選択してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q69-Fs-atb">
