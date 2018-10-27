@@ -144,7 +144,13 @@ class PostImageViewController: UIViewController, UITextViewDelegate, UITextField
         }
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectShop" {
+            let shopSuggestVC = segue.destination as! ShopSuggestViewController
+            shopSuggestVC.image = self.postImageView.image
+        }
+    }
+    
     func loadShops() {
         let jsonDecoder = JSONDecoder()
         self.shops = try! jsonDecoder.decode([Shop].self, from: (UserDefaults.standard.data(forKey: "Shops"))!)

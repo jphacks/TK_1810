@@ -445,6 +445,9 @@
                                 <state key="normal" title="お店を選択してください">
                                     <color key="titleColor" red="0.124973126" green="0.151200316" blue="0.13420549179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="lHF-xc-Guu" kind="presentation" id="feF-wM-iFf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="食べ物を選択してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q69-Fs-atb">
                                 <rect key="frame" x="96" y="151" width="255" height="30"/>
@@ -498,7 +501,7 @@
                     <connections>
                         <outlet property="caption" destination="0L0-8F-d6m" id="HAs-Ky-CRp"/>
                         <outlet property="foodName" destination="q69-Fs-atb" id="DkB-hb-nAk"/>
-                        <outlet property="postImageView" destination="gbB-1t-YhX" id="5oN-ha-jkn"/>
+                        <outlet property="postImageView" destination="gbB-1t-YhX" id="WKp-DA-kEo"/>
                         <outlet property="shopNameButton" destination="ATr-j3-sY5" id="q3x-6Q-tpn"/>
                     </connections>
                 </viewController>
@@ -545,6 +548,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rBL-4L-4Mt" kind="presentation" identifier="selectedShop" id="7x7-9y-QkV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -556,6 +562,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FMC-Tt-8CW"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="cem-TJ-MMU" id="1dP-zb-Rib"/>
+                        <outlet property="searchBar" destination="mUq-sx-Mu0" id="01V-QT-2dV"/>
+                        <outlet property="tableView" destination="bzH-jW-lAO" id="QpE-QD-COZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPR-Md-Lgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -577,6 +588,7 @@
         <image name="twitter" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="7x7-9y-QkV"/>
         <segue reference="kO8-Jx-pxc"/>
     </inferredMetricsTieBreakers>
 </document>
