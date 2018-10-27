@@ -69,11 +69,6 @@ class PostImageViewController: UIViewController, UITextViewDelegate, UITextField
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        caption.resignFirstResponder()
-        foodName.resignFirstResponder()
-    }
-    
     @IBAction func postSNS(_ sender: Any) {
         let swifter = Swifter(consumerKey: TwitterToken().consumerKey, consumerSecret: TwitterToken().consumerSecret, oauthToken: self.access_token, oauthTokenSecret: self.access_secret)
         let postImage = self.image
@@ -147,6 +142,11 @@ class PostImageViewController: UIViewController, UITextViewDelegate, UITextField
                 print(error)
             }
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        caption.resignFirstResponder()
+        foodName.resignFirstResponder()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
