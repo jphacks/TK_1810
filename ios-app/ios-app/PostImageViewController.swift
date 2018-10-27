@@ -150,7 +150,14 @@ class PostImageViewController: UIViewController, UITextViewDelegate, UITextField
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "selectShop" {
+        if segue.identifier == "showCoupon" {
+            let showCouponVC = segue.destination as! ShowCouponScoreViewController
+            showCouponVC.image = self.postImageView.image
+            showCouponVC.availableFrom = self.couponAvailableFrom
+            showCouponVC.expiredAt = self.couponExpeiredAt
+            showCouponVC.shopName = self.shopName
+            showCouponVC.amount = self.couponAmount
+        } else if segue.identifier == "selectShop" {
             let shopSuggestVC = segue.destination as! ShopSuggestViewController
             shopSuggestVC.image = self.postImageView.image
         }
