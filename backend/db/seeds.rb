@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# shops
+json = ActiveSupport::JSON.decode(File.read('db/seeds/shops.json'))
+json.each do |data|
+  #Shop.create!(*d, without_protection: true)
+  Shop.create!(data)
+end

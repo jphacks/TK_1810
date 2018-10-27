@@ -1,0 +1,21 @@
+[
+  {
+    "name": "ラーメン二郎 三田本店",
+    "url": "https://tabelog.com/tokyo/A1314/A131402/13006051/",
+    "address": "東京都港区三田2-16-4",
+    "latitude" : 35.64808,
+    "longitude": 139.741614,
+    "mean_coupon": 50,
+    "image_url": "http://www.geocities.co.jp/Foodpia-Olive/3433/img226.jpg"
+  },
+  {
+    "name": "ラーメン二郎 目黒店",
+    "url": "https://tabelog.com/tokyo/A1316/A131601/13003449/",
+    "address": "東京都目黒区目黒3-7-2",
+    "latitude" : 35.6342109,
+    "longitude": 139.70710,
+    "mean_coupon": 50,
+    "image_url": "http://www.geocities.co.jp/Foodpia-Olive/3433/img005.jpg"
+  }
+]
+

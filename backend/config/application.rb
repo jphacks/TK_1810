@@ -17,6 +17,7 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module Backend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -31,5 +32,18 @@ module Backend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    
+    # app timezone
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local 
+    
+    # omniauth error (https://goo.gl/v7Y9ax)
+    # config.middleware.insert_after(ActiveRecord::QueryCache, ActionDispatch::Cookies)
+    # config.middleware.insert_after(ActionDispatch::Cookies, ActionDispatch::Session::CookieStore)
+    config.middleware.insert_after ActiveRecord::Migration::CheckPending, ActionDispatch::Cookies
+    config.middleware.insert_after ActionDispatch::Cookies, ActionDispatch::Session::CookieStore
+
+    # jbuilder setting
+    Jbuilder.ignore_nil
   end
 end
