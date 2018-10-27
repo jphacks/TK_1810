@@ -83,6 +83,13 @@ class CouponViewController: UIViewController {
         }
     }
     
+    @IBAction func twitterLink(_ sender: Any) {
+        let url = URL(string: self.twitterUrl)!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     func loadCoupons() {
         let jsonDecoder = JSONDecoder()
         self.coupons = try! jsonDecoder.decode([Coupon].self, from: (UserDefaults.standard.data(forKey: "Coupons"))!)

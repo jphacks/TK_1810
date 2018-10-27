@@ -154,6 +154,9 @@
                                         <rect key="frame" x="26" y="459" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="twitter"/>
+                                        <connections>
+                                            <action selector="twitterLink:" destination="B8w-5q-cjz" eventType="touchUpInside" id="V5V-MM-NWZ"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="os4-ya-EZS">
                                         <rect key="frame" x="46" y="177" width="250" height="250"/>
@@ -182,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBJ-iw-dmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2033" y="-763"/>
+            <point key="canvasLocation" x="2033" y="-665"/>
         </scene>
         <!--Current User View Controller-->
         <scene sceneID="y1Q-ZC-5g4">
@@ -412,6 +415,7 @@
         <image name="camera" width="615" height="456"/>
         <image name="coupon" width="792" height="402"/>
         <image name="logo2" width="375" height="667"/>
+        <image name="twitter" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kO8-Jx-pxc"/>
