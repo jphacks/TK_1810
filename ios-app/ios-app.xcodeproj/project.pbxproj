@@ -15,6 +15,8 @@
 		F91BA0B721843AFD0059E943 /* TwitterAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0B621843AFD0059E943 /* TwitterAuthViewController.swift */; };
 		F91BA0B921843DA80059E943 /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0B821843DA80059E943 /* CurrentUserViewController.swift */; };
 		F91BA0BB218440270059E943 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0BA218440270059E943 /* Models.swift */; };
+		F91BA0BD218445080059E943 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0BC218445080059E943 /* TakePhotoViewController.swift */; };
+		F91BA0BF218447CE0059E943 /* PreviewCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91BA0BE218447CE0059E943 /* PreviewCameraViewController.swift */; };
 		FB65A0E01802ADB771ABFCA8 /* Pods_ios_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E989651F65F186BDF310FF8 /* Pods_ios_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		F91BA0B621843AFD0059E943 /* TwitterAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthViewController.swift; sourceTree = "<group>"; };
 		F91BA0B821843DA80059E943 /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
 		F91BA0BA218440270059E943 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F91BA0BC218445080059E943 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
+		F91BA0BE218447CE0059E943 /* PreviewCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 				F91BA0B621843AFD0059E943 /* TwitterAuthViewController.swift */,
 				F91BA0B821843DA80059E943 /* CurrentUserViewController.swift */,
 				F91BA0BA218440270059E943 /* Models.swift */,
+				F91BA0BC218445080059E943 /* TakePhotoViewController.swift */,
+				F91BA0BE218447CE0059E943 /* PreviewCameraViewController.swift */,
 			);
 			path = "ios-app";
 			sourceTree = "<group>";
@@ -231,6 +237,8 @@
 				F91BA0A7218433E30059E943 /* ViewController.swift in Sources */,
 				F91BA0A5218433E30059E943 /* AppDelegate.swift in Sources */,
 				F91BA0B921843DA80059E943 /* CurrentUserViewController.swift in Sources */,
+				F91BA0BD218445080059E943 /* TakePhotoViewController.swift in Sources */,
+				F91BA0BF218447CE0059E943 /* PreviewCameraViewController.swift in Sources */,
 				F91BA0BB218440270059E943 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
