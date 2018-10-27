@@ -246,11 +246,17 @@
                                 <rect key="frame" x="45" y="616" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Orion_back"/>
+                                <connections>
+                                    <action selector="cancel:" destination="wcv-1A-xWB" eventType="touchUpInside" id="0Tg-jB-U1S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-Ft-alg">
                                 <rect key="frame" x="167" y="616" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Orion_images"/>
+                                <connections>
+                                    <action selector="savePhoto:" destination="wcv-1A-xWB" eventType="touchUpInside" id="gvJ-0K-QqS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lo-Dl-C8i">
                                 <rect key="frame" x="291" y="616" width="40" height="40"/>
