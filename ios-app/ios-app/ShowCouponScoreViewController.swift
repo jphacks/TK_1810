@@ -16,21 +16,20 @@ class ShowCouponScoreViewController: UIViewController {
     var shopName: String = ""
     var amount: Int = 0
     
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var discountValue: UILabel!
+    @IBOutlet var availableDate: UILabel!
+    @IBOutlet var expiredDate: UILabel!
+    @IBOutlet var shopNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.imageView.image = image
+        self.discountValue.text = String(amount) + "円割引"
+        self.availableDate.text = "利用開始日：" + availableFrom
+        self.expiredDate.text = "有効期限：" + expiredAt
+        self.shopNameLabel.text = "お店名：" + shopName
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -485,6 +485,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0kQ-xa-G27"/>
                     </view>
+                    <connections>
+                        <outlet property="availableDate" destination="80F-yq-Nkx" id="84L-ey-KHC"/>
+                        <outlet property="discountValue" destination="gAh-02-qNo" id="I9g-hH-hZr"/>
+                        <outlet property="expiredDate" destination="c8l-Hj-FRL" id="6Mj-eA-x24"/>
+                        <outlet property="imageView" destination="wWU-4U-4nK" id="D9o-1c-Hca"/>
+                        <outlet property="shopNameLabel" destination="Dx3-5x-uA4" id="coX-ly-6jZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTn-EM-6Op" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -679,7 +686,6 @@
         <image name="twitter" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="feF-wM-iFf"/>
         <segue reference="7x7-9y-QkV"/>
         <segue reference="0Es-eG-dEa"/>
     </inferredMetricsTieBreakers>
