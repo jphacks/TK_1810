@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+docker-compose down
+docker-compose rm -f
+docker volume rm backend_bundle
+docker volume rm backend_db
+docker volume rm rails_docker_bundle
+docker volume rm rails_docker_db
