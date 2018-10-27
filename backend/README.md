@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend server for the product.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+```
+git clone git@gitlab.com:mutekikantai/backend.git
+bundle install
+rails db:create && rails db:migrate && rails db:seed
+rails s
+```
 
-* System dependencies
+## environment variables
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`DB_PASSWORD`: mysql database password
+`TWITTER_KEY`: twitter api key
+`TWITTER_SECRET`: twitter api secret
