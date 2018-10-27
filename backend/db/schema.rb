@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_27_155011) do
+ActiveRecord::Schema.define(version: 2018_10_27_173051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,18 @@ ActiveRecord::Schema.define(version: 2018_10_27_155011) do
     t.boolean "is_used", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "comment", null: false
+    t.string "tweet_url", null: false
+    t.bigint "food_category_id"
+    t.index ["food_category_id"], name: "index_coupons_on_food_category_id"
     t.index ["shop_id"], name: "index_coupons_on_shop_id"
     t.index ["user_id"], name: "index_coupons_on_user_id"
+  end
+
+  create_table "food_categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "shops", force: :cascade do |t|
@@ -58,4 +68,5 @@ ActiveRecord::Schema.define(version: 2018_10_27_155011) do
     t.index ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
   end
 
+  add_foreign_key "coupons", "food_categories"
 end

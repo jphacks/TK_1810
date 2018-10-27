@@ -49,6 +49,12 @@ class CouponsController < ApplicationController
 
   private
     def coupon_params
-      params.permit(:insta_score, :photo_url, :shop_id)
+      params.permit(
+        :insta_score,
+        :photo_url,
+        :commnet,
+        :shop_id,
+        :food_category_id,
+      )
     end
 end

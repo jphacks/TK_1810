@@ -3,18 +3,18 @@
 # Table name: users
 #
 #  id            :bigint(8)        not null, primary key
-#  provider      :string(255)      not null
-#  uid           :string(255)      not null
-#  twitter_name  :string(255)      not null
-#  twitter_id    :string(255)      not null
-#  image_url     :string(255)
+#  provider      :string           not null
+#  uid           :string           not null
+#  twitter_name  :string           not null
+#  twitter_id    :string           not null
+#  image_url     :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  twitter_desc  :string(255)
-#  access_secret :string(255)
-#  access_token  :string(255)
-#  credentials   :text(65535)
-#  raw_info      :text(65535)
+#  twitter_desc  :string
+#  access_secret :string
+#  access_token  :string
+#  credentials   :text
+#  raw_info      :text
 #
 
 class User < ApplicationRecord
