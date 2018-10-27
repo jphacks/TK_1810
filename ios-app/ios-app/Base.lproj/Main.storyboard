@@ -197,11 +197,17 @@
                                         <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="camera:" destination="VRZ-yF-gNj" eventType="touchUpInside" id="L1t-4m-qcI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDL-z5-Ue3">
                                 <rect key="frame" x="0.0" y="20" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Orion_angle-left"/>
+                                <connections>
+                                    <action selector="back:" destination="VRZ-yF-gNj" eventType="touchUpInside" id="C3d-i9-WVu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -215,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="2770" y="24"/>
         </scene>
-        <!--View Controller-->
+        <!--Preview Camera View Controller-->
         <scene sceneID="WKR-Fo-cEu">
             <objects>
-                <viewController id="wcv-1A-xWB" sceneMemberID="viewController">
+                <viewController id="wcv-1A-xWB" customClass="PreviewCameraViewController" customModule="ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m2F-cg-RFL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,6 +261,9 @@
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="QmN-45-uCs"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="GVH-No-ND5" id="U9a-me-4w8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeY-TY-jh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
