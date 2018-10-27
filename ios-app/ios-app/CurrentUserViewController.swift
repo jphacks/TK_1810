@@ -104,6 +104,18 @@ class CurrentUserViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    // Cellが選択された場合
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCouponID = self.coupons[indexPath.row].id
+        let userDefaults = UserDefaults.standard
+        if selectedCouponID != 0 {
+            userDefaults.set(selectedCouponID, forKey: "SelectedCoupon")
+            userDefaults.synchronize()
+            // 遷移するために Segue を呼び出す
+            performSegue(withIdentifier: "selectedCoupon",sender: nil)
+        }
+    }
+    
     func getCurrentUser() {
         let url = "https://mutekikantai-backend.herokuapp.com/users/current"
         //        let url = "http://127.0.0.1:3000/users/current"
