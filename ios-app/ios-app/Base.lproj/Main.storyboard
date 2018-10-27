@@ -480,6 +480,9 @@
                                 <rect key="frame" x="14" y="31" width="50" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="coupon"/>
+                                <connections>
+                                    <segue destination="fEm-DL-Hst" kind="presentation" id="4Tv-5D-Fxk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -688,5 +691,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="7x7-9y-QkV"/>
         <segue reference="0Es-eG-dEa"/>
+        <segue reference="4Tv-5D-Fxk"/>
     </inferredMetricsTieBreakers>
 </document>
