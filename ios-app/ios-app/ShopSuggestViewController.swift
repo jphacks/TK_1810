@@ -26,6 +26,8 @@ class ShopSuggestViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
+    var shopAnnotationArray: [MKAnnotation] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -156,8 +158,14 @@ class ShopSuggestViewController: UIViewController, UITableViewDelegate, UITableV
                 for shop in shops {
                     self.shopLists.append(shop.name)
                     
+                    // お店のピンを立てる
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = CLLocationCoordinate2DMake(Double(shop.latitude!), Double(shop.longitude!))
+                    annotation.title = shop.name
+                    self.shopAnnotationArray.append(annotation)
                 }
                 self.searchResults = self.shopLists
+                self.mapView.addAnnotations(self.shopAnnotationArray)
             case .failure(let error):
                 print(error)
             }
