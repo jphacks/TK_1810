@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+body{
+  background-image: url("/background.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  color: #fff;
+}
+    .logo img{
+      max-width: 200px;
+      height: auto;
+    }
+    .logo{
+      text-align: center;
+      margin-top: 30px;
+    }
+    .message-title{
+      position: absolute;
+      border-bottom: #fff solid 1px;
+      top: 220px;
+      width: 100%;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .message{
+      position: absolute;
+      top: 270px;
+      width: 100%;
+    }
+    .footer{
+      position: fixed;
+      border: #fff solid 2px;
+      border-radius: 5px;
+      text-align: center;
+      bottom: 10px;
+      width: 80%;
+      padding: 5px 0;
+      left: 35px;
+    }
+    .footer:hover{
+      background-color: rgba(255,255,255,0.3);
+    }
+    .container{
+      position: relative;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+    }
+    .test{
+      position: absolute;
+      top: 80px;
+      text-align: center;
+      width: 100%;
+    }
+
+    </style>
+    <title>ばえクーポン</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <%= image_tag("/パス 4@2x.png") %>
+      </div>
+      <div class="test">
+        店舗側利用画面
+      </div>
+      <div class="message-wrapper">
+        <div class="message-title">
+          読み込み結果
+        </div>
+        <div class="message">
+          <%= @message %>
+        </div>
+      </div>
+      <div class="footer">
+        戻る
+      </div>
+    </div>
+  </body>
+</html>
+

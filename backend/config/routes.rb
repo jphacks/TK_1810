@@ -10,13 +10,14 @@ Rails.application.routes.draw do
   get 'users/current/coupons', to: 'coupons#index'
   
   # shops
-  get 'shops',     to: 'shops#index'
+  get 'shops', to: 'shops#index'
   get 'shops/search', to: 'shops#search'
   get 'shops/:id', to: 'shops#show'
 
   # coupons
   get 'coupons/:id', to: 'coupons#show'
   put 'coupons', to: 'coupons#create'
+  get 'coupons/apply/:uuid', to: 'coupons#apply'
 
   # food categories
   get 'food_categories', to: 'food_categories#index'

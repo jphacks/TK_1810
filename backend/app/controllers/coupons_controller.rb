@@ -51,6 +51,16 @@ class CouponsController < ApplicationController
     end
   end
 
+  def apply
+    @coupon = Coupon.find_by(uuid: params[:uuid])
+    if @coupon.is_used
+      @message = '失敗!'
+    else
+      @coupon.update(is_used: true)
+      @message = '成功!'
+    end
+  end
+
   private
     def coupon_params
       params.permit(
