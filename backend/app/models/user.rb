@@ -16,7 +16,6 @@
 #  credentials   :text
 #  raw_info      :text
 #
-
 class User < ApplicationRecord
   validates :uid, uniqueness: { scope: :provider }
   has_many :coupons, dependent: :destroy
@@ -50,6 +49,17 @@ class User < ApplicationRecord
 
       user.credentials = credentials.to_json
       user.raw_info    = raw_info.to_json
+    end
+  end
+
+  def impact
+    n_followers = JSON.parse(self.raw_info)["followers_count"]
+    if n_followers <= 1000
+      return 0.1
+    elsif n_followers <= 10000
+      return 0.2
+    else
+      return 0.3
     end
   end
 end

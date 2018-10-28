@@ -32,7 +32,7 @@ class CouponsController < ApplicationController
 
     # set coupon amount
     mean = @coupon.shop.mean_coupon
-    instagrammable = 1 + (@coupon.insta_score-3)/2.
+    instagrammable = 1 + ((@coupon.insta_score-3)/2. + current_user.impact)
 
     @coupon.amount = mean * instagrammable
 
