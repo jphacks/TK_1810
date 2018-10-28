@@ -1,0 +1,334 @@
+swagger: '2.0'
+info:
+  description: This is the backend server of the product.
+  version: 0.0.0
+  title: JPHACKS2018
+host: 'localhost:3000'
+basePath: /v2
+tags:
+  - name: user
+    description: users
+  - name: shop
+    description: tie-up shops
+  - name: coupon
+    description: coupons
+schemes:
+  - https
+  - http
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+      provider:
+        type: string
+      uid:
+        type: string
+      twitter_name:
+        type: string
+      twitter_id:
+        type: string
+      twitter_desc:
+        type: string
+      image_url:
+        type: string
+      access_secret:
+        type: string
+      access_token:
+        type: string
+      credentials:
+        type: string
+      raw_info:
+        type: string
+      created_at:
+        type: object
+      updated_at:
+        type: object
+  Shop:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      url:
+        type: string
+      address:
+        type: string
+      latitude:
+        type: number
+      longitude:
+        type: number
+      mean_coupon:
+        type: integer
+      image_url:
+        type: string
+      created_at:
+        type: object
+      updated_at:
+        type: object
+  Coupon:
+    type: object
+    properties:
+      id:
+        type: integer
+      amount:
+        type: integer
+      available_from:
+        type: object
+      expired_at:
+        type: object
+      photo_url:
+        type: string
+      shop_id:
+        type: integer
+      user_id:
+        type: integer
+      is_used:
+        type: boolean
+      insta_score:
+        type: number
+      created_at:
+        type: object
+      updated_at:
+        type: object 
+paths:
+  '/auth/twitter':
+    get:
+      tags:
+        - user
+      summary: Ask users to allow permission to use twitter account.
+      operationId: oauth_authorize
+      consumes:
+        - application/json
+      responses:
+        '302':
+          description: Resource Found
+          
+  '/auth/twitter/callback':
+    get:
+      tags:
+        - user
+      summary: Callback path of twitter authorization
+      operationId: oauth_callback
+      consumes:
+        - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            title: oauth_callback
+            type: object
+            properties:
+              status:
+                type: string
+              error_message:
+                type: string
+              data:
+                type: object
+                properties:
+                  user: 
+                    $ref: '#/definitions/User'
+  '/logout':
+    get:
+      tags:
+        - user
+      summary: Sign out
+      operationId: logout
+      consumes:
+        - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            title: logout
+            type: object
+            properties:
+              status:
+                type: string
+              error_message:
+                type: string
+  '/users/current':
+    get:
+      tags:
+        - user
+      summary: Get current user
+      operationId: get_user
+      consumes:
+        - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            title: current_user
+            type: object
+            properties:
+              status:
+                type: string
+              error_message:
+                type: string
+              data:
+                type: object
+                properties:
+                  user: 
+                    $ref: '#/definitions/User'
+              
+  '/users/current/coupons':
+    get:
+      tags:
+        - user
+      summary: Get user's coupons
+      operationId: get_users_coupons
+      consumes:
+        - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            title: current_users_coupon
+            type: object
+            properties:
+              status:
+                type: string
+              error_message:
+                type: string
+              data:
+                type: array
+                items:
+                  properties:
+                    coupons:
+                      type: array
+                      items:
+                        $ref: '#/definitions/Coupon'
+  '/shops':
+    get:
+      tags:
+        - shop
+      summary: Get all shops
+      operationId: get_shops
+      consumes:
+        - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            title: all_shops
+            type: object
+            properties:
+              status:
+                type: string
+              error_message:
+                type: string
+              data:
+                type: array
+                items:
+                  properties:
+                    shops:
+                      type: array
+                      items:
+                        $ref: '#/definitions/Shop'
+  '/shops/{id}':
+    get:
+      tags:
+        - shop
+      summary: Get a shop
+      operationId: get_shop
+      consumes:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: ID of shop to get
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: OK
+          schema:
+            title: all_shops
+            type: object
+            properties:
+              status:
+                type: string
+              error_message:
+                type: string
+              data:
+                type: array
+                items:
+                  properties:
+                    shops:
+                      $ref: '#/definitions/Shop'
+  '/coupons/{id}':
+    get:
+      tags:
+        - coupon
+      summary: Get a coupon
+      operationId: get_coupon
+      consumes:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: ID of coupon to get
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+              error_message:
+                type: string
+              data:
+                type: object
+                properties:
+                  coupon:
+                    $ref: '#/definitions/Coupon'
+  '/coupons':
+    put:
+      tags:
+        - coupon
+      summary: Create a coupon
+      operationId: create_coupon
+      consumes:
+        - application/json
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: photo_url
+          in: formData
+          description: photo url
+          required: true
+          type: string
+        - name: insta_score
+          in: formData
+          description: instagrammable score (ml model output)
+          required: true
+          type: number
+          format: float
+        - name: shop_id
+          in: formData
+          description: shop id
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+              error_message:
+                type: string
+              data:
+                type: object
+                properties:
+                  coupon:
+                    $ref: '#/definitions/Coupon'
