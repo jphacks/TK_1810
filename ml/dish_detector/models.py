@@ -111,8 +111,8 @@ class YOLOLayer(nn.Module):
         self.ignore_thres = 0.5
         self.lambda_coord = 1
 
-        self.mse_loss = nn.MSELoss(size_average=True)  # Coordinate loss
-        self.bce_loss = nn.BCELoss(size_average=True)  # Confidence loss
+        self.mse_loss = nn.MSELoss(reduction='elementwise_mean')  # Coordinate loss
+        self.bce_loss = nn.BCELoss(reduction='elementwise_mean')  # Confidence loss
         self.ce_loss = nn.CrossEntropyLoss()  # Class loss
 
     def forward(self, x, targets=None):
@@ -173,7 +173,10 @@ class YOLOLayer(nn.Module):
 
             nProposals = int((pred_conf > 0.5).sum().item())
             recall = float(nCorrect / nGT) if nGT else 1
-            precision = float(nCorrect / nProposals)
+            if nProposals == 0:
+                precision = 0
+            else:
+                precision = float(nCorrect / nProposals)
 
             # Handle masks
             mask = Variable(mask.type(ByteTensor))
@@ -267,6 +270,7 @@ class Darknet(nn.Module):
 
         self.losses["recall"] /= 3
         self.losses["precision"] /= 3
+
         return sum(output) if is_training else torch.cat(output, 1)
 
     def load_weights(self, weights_path):
