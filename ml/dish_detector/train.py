@@ -187,13 +187,13 @@ def main():
                             help="number of epochs")
     parser.add_argument("--image_folder", type=str, default="data/mydata/images", 
                             help="path to dataset")
-    parser.add_argument("--batch_size", type=int, default=8, 
+    parser.add_argument("--batch_size", type=int, default=32, 
                             help="size of each image batch")
-    parser.add_argument("--base_model_config_path", type=str, default="config/yolov3.cfg", 
+    parser.add_argument("--base_model_config_path", type=str, default="config/yolov3-tiny.cfg", 
                             help="path to model config file")
-    parser.add_argument("--base_model_weights_path", type=str, default="weights/yolov3.weights", 
+    parser.add_argument("--base_model_weights_path", type=str, default="weights/yolov3-tiny.weights", 
                             help="path to weights file")
-    parser.add_argument("--model_config_path", type=str, default="config/mymodel.cfg", 
+    parser.add_argument("--model_config_path", type=str, default="config/mymodel-tiny.cfg", 
                             help="path to model config file")
     parser.add_argument("--weights_path", type=str, default=None, 
                             help="path to weights file")
@@ -298,19 +298,22 @@ def main():
     global Tensor
     Tensor = torch.cuda.FloatTensor if cuda else torch.FloatTensor
 
-    # optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()))
-    optimizer = torch.optim.SGD(
-                    model.parameters(), 
-                    lr=lr, 
-                    momentum=momentum,
-                    weight_decay=decay)
-    scheduler = torch.optim.lr_scheduler.MultiStepLR(
-                    optimizer,
-                    milestones=steps,
-                    gamma=scales[0])
+    optimizer = torch.optim.Adam(
+                    model.parameters(),
+                    lr=lr,
+                    amsgrad=True)
+    # optimizer = torch.optim.SGD(
+    #                 model.parameters(), 
+    #                 lr=lr, 
+    #                 momentum=momentum,
+    #                 weight_decay=decay)
+    # scheduler = torch.optim.lr_scheduler.MultiStepLR(
+    #                 optimizer,
+    #                 milestones=steps,
+    #                 gamma=scales[0])
 
     for epoch in range(1, opt.epochs+1):
-        scheduler.step()
+        # scheduler.step()
         phases = ['train']
         if epoch % opt.test_interval == 0:
             phases.append('valid')

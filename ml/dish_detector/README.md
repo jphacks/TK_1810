@@ -2,7 +2,7 @@
 
 Minimal implementation of YOLOv3 in PyTorch.
 
-This is a based on [PyTorch-YOLOv3](https://github.com/eriklindernoren/PyTorch-YOLOv3)
+This model is based on [PyTorch-YOLOv3](https://github.com/eriklindernoren/PyTorch-YOLOv3)
 
 ## 目的
 
@@ -18,3 +18,6 @@ This is a based on [PyTorch-YOLOv3](https://github.com/eriklindernoren/PyTorch-Y
 そこで，物体検出モデルを組むことにした．最初は食べ物の物体検出（bbox + 料理カテゴリ）をしようと考えたが，データセットがないことが問題となった．
 
 そこで試しにMSCOCOで訓練されたYOLOv3を動かしてみたところ，`bowl`クラスが比較的お皿を拾ってくれることがわかった．よって，これをファインチューニングすることで，食べ物でなく画像中のお皿を検出するモデルをつくることにした．
+
+### データ・セット
+データセットはインスタグラムから集めた主にラーメンとオムライスの画像約210枚をアノテーションし，150(train)+60(val)とした．
