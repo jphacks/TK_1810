@@ -1,5 +1,7 @@
 # ばえるーポン
 
+[![Alt text](https://user-images.githubusercontent.com/25325947/47612006-a6128480-dab4-11e8-8c0d-e15416ea2706.png)](https://youtu.be/9m6MVkPBhqg)
+
 [Youtubeリンク](https://youtu.be/9m6MVkPBhqg)
 
 ## 製品概要
