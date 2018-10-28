@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_27_173051) do
+ActiveRecord::Schema.define(version: 2018_10_28_010328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2018_10_27_173051) do
     t.string "comment", null: false
     t.string "tweet_url", null: false
     t.bigint "food_category_id"
+    t.string "uuid", null: false
     t.index ["food_category_id"], name: "index_coupons_on_food_category_id"
     t.index ["shop_id"], name: "index_coupons_on_shop_id"
     t.index ["user_id"], name: "index_coupons_on_user_id"

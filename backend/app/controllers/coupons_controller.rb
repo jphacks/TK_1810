@@ -41,6 +41,9 @@ class CouponsController < ApplicationController
     @coupon.available_from = now.tomorrow
     @coupon.expired_at = now.tomorrow.next_month
     
+    # set random uuid
+    @coupon.uuid = SecureRandom.hex(15)
+
     # create
     unless @coupon.save
       @status = "error"
