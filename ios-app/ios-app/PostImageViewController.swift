@@ -74,7 +74,7 @@ class PostImageViewController: UIViewController, UITextViewDelegate, UITextField
         let postImage = self.image
         print(image as Any)
         let imageData = postImage!.jpegData(compressionQuality: 0.1)
-        self.tweetComment = "#ばえるーポン" + " #" + self.shopName + "\n" + caption.text //+ "\n #jphacks" //本番はコメントを取る
+        self.tweetComment = "#ばえるーポン" + " #" + self.shopName + "\n" + caption.text + "\n #jphacks" //本番はコメントを取る
         swifter.postTweet(status: tweetComment, media: imageData!, success: { res in
             print(res)
             let media_url = res["extended_entities"]["media"][0]["media_url"].string
