@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   
   # shops
   get 'shops',     to: 'shops#index'
+  get 'shops/search', to: 'shops#search'
   get 'shops/:id', to: 'shops#show'
 
   # coupons
