@@ -12,6 +12,12 @@ class ApplicationController < ActionController::API
   
   def set_format
     request.format = 'json'
+    if request.path_info.include? "coupons/apply"
+      request.format = 'html'
+    else
+      request.format = 'json'
+    end
+
   end
 
   def current_user
@@ -21,7 +27,7 @@ class ApplicationController < ActionController::API
 
   def logged_in?
     if !session[:user_id]
-      @status = "error"
+     @status = "error"
       @error = "login needed!"
       return false
     end
