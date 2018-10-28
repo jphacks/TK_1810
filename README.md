@@ -1,6 +1,6 @@
 # ばえるーポン
 
-![ロゴ](https://youtu.be/9m6MVkPBhqg)
+[Youtubeリンク](https://youtu.be/9m6MVkPBhqg)
 
 ## 製品概要
 ### 魅力 X Tech
