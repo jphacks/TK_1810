@@ -1,6 +1,7 @@
 classes= 80
+# train=data/mydata/overfit_list.txt
 train=data/mydata/train_list.txt
-valid=data/mydata/valid_list.txt
+valid=data/mydata/test_list.txt
 names=data/coco.names
 backup=backup/
 eval=coco

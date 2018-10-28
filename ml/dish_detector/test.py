@@ -20,10 +20,10 @@ from torch.autograd import Variable
 import torch.optim as optim
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--batch_size", type=int, default=16, help="size of each image batch")
-parser.add_argument("--model_config_path", type=str, default="config/yolov3.cfg", help="path to model config file")
-parser.add_argument("--data_config_path", type=str, default="config/coco.data", help="path to data config file")
-parser.add_argument("--weights_path", type=str, default="weights/yolov3.weights", help="path to weights file")
+parser.add_argument("--batch_size", type=int, default=8, help="size of each image batch")
+parser.add_argument("--model_config_path", type=str, default="config/yolov3-tiny.cfg", help="path to model config file")
+parser.add_argument("--data_config_path", type=str, default="config/mydata.data", help="path to data config file")
+parser.add_argument("--weights_path", type=str, default="weights/yolov3-tiny.weights", help="path to weights file")
 parser.add_argument("--class_path", type=str, default="data/coco.names", help="path to class label file")
 parser.add_argument("--iou_thres", type=float, default=0.5, help="iou threshold required to qualify as detected")
 parser.add_argument("--conf_thres", type=float, default=0.5, help="object confidence threshold")
@@ -43,7 +43,8 @@ num_classes = int(data_config["classes"])
 
 # Initiate model
 model = Darknet(opt.model_config_path)
-model.load_weights(opt.weights_path)
+model_wts = torch.load(opt.weights_path)
+model.load_state_dict(model_wts)
 
 if cuda:
     model = model.cuda()
