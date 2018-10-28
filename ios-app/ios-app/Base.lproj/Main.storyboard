@@ -525,7 +525,7 @@
                                 <rect key="frame" x="23" y="141" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="詳細を入力してください" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0L0-8F-d6m">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0L0-8F-d6m">
                                 <rect key="frame" x="23" y="204" width="328" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.85383668660000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -689,8 +689,9 @@
         <image name="twitter" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="feF-wM-iFf"/>
         <segue reference="7x7-9y-QkV"/>
-        <segue reference="Fk5-HN-ED6"/>
+        <segue reference="0Es-eG-dEa"/>
         <segue reference="4Tv-5D-Fxk"/>
     </inferredMetricsTieBreakers>
 </document>
