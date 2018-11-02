@@ -1,6 +1,6 @@
 # ばえるーポン
-![ロゴ](https://user-images.githubusercontent.com/25325947/47612006-a6128480-dab4-11e8-8c0d-e15416ea2706.png)
-TODO:ここに動画リンク
+
+![ロゴ](https://youtu.be/9m6MVkPBhqg)
 
 ## 製品概要
 ### 魅力 X Tech
